@@ -25,7 +25,7 @@ cc_library(
             "aws-cpp-sdk-core/source/platform/linux-shared/*.cpp",
         ]),
         "//conditions:default": glob([
-            "aws-cpp-sdk-core/source/platform/linux-shared/*.cpp",
+            "aws-cpp-sdk-core/source/platform/linux-shared/*.cpp"]),
     }) + glob([
         "aws-cpp-sdk-core/include/**/*.h",
         "aws-cpp-sdk-core/source/*.cpp",
