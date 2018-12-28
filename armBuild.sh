@@ -29,6 +29,13 @@
 # Then it will successfully build on Jetson.
 
 
+# For when bazel has cert problems due to the embedded jdk:
+# https://github.com/bazelbuild/bazel/issues/5741
+#  Put in your bazelrc file these two startup options:
+#   startup --host_jvm_args=-Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts \
+#           --host_jvm_args=-Djavax.net.ssl.trustStorePassword=changeit
+
+
 bazel build -c opt --copt="-funsafe-math-optimizations" --copt="-ftree-vectorize" --copt="-fomit-frame-pointer" \
  --local_resources 1024,1.0,1.0 --verbose_failures tensorflow/tools/pip_package:build_pip_package
 
