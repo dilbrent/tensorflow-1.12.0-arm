@@ -1,0 +1,5 @@
+startup --host_jvm_args=-Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts \
+        --host_jvm_args=-Djavax.net.ssl.trustStorePassword=changeit
+
+
+import /home/brent/tensorflow-1.12.0-arm/.tf_configure.bazelrc
